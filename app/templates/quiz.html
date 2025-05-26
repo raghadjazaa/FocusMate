@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FocusMate - Quiz</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="quiz-container">
+        <h1 class="main-title">Quiz Time 📝</h1>
+
+        <form action="{{ url_for('submit') }}" method="post">
+            {% for q in questions %}
+                <div class="question-block">
+                    <p class="question-text">{{ loop.index }}. {{ q.question }}</p>
+
+                    {% set question_name = 'q' ~ loop.index0 %}
+
+                    {% for option in q.options %}
+                        <label class="option-label">
+                            <input type="radio" name="{{ question_name }}" value="{{ option }}" required>
+                            {{ option }}
+                        </label><br>
+                    {% endfor %}
+                </div>
+            {% endfor %}
+            <button type="submit" class="start-btn">Submit Quiz</button>
+        </form>
+    </div>
+</body>
+</html>

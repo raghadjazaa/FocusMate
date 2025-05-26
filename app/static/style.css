@@ -1,0 +1,112 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f1ea; /* بيج ناعم */
+    color: #333;
+}
+
+.outer-frame, .quiz-container, .result-container {
+    max-width: 700px;
+    margin: 50px auto;
+    padding: 40px;
+    background-color: #fff;
+    border: 1px solid #dcdcdc;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.05);
+}
+
+.inner-container {
+    text-align: center;
+}
+
+.main-title {
+    font-size: 36px;
+    color: #3e4a3a; /* زيتي غامق */
+    margin-bottom: 10px;
+}
+
+.tagline, .upload-instruction {
+    color: #6d6d6d;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.divider {
+    border: none;
+    height: 2px;
+    background-color: #ccc;
+    width: 60%;
+    margin: 0 auto 30px auto;
+}
+
+.button-group {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.start-btn, .view-btn {
+    background-color: #3e4a3a;
+    color: white;
+    padding: 12px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background 0.3s ease;
+    display: inline-block;
+    text-align: center;
+}
+
+.start-btn:hover, .view-btn:hover {
+    background-color: #2f392e;
+}
+
+.question-block {
+    margin-bottom: 25px;
+    padding: 15px;
+    background-color: #f2f2ec;
+    border-radius: 8px;
+    border-left: 5px solid #3e4a3a;
+}
+
+.question-text {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.option-label {
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+/* تحسين مظهر زر الراديو */
+.option-label input[type="radio"] {
+    margin-right: 5px;
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+/* تأكيد ظهور الراديو */
+input[type="radio"] {
+    display: inline-block !important;
+    opacity: 1 !important;
+    pointer-events: auto !important;
+}
+
+.score {
+    font-size: 24px;
+    margin: 20px 0;
+}
+
+.score-message {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
